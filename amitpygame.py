@@ -29,7 +29,8 @@ def makeymakey():
     pygame.draw.line(screen,red,(100,100),(900,900))
     pygame.display.update()
 
-makeymakey()
+
+              
 
 while True:
     pygame.display.update()
@@ -40,10 +41,30 @@ while True:
         elif event.type==pygame.MOUSEMOTION:
             print("'mouse at:",event.pos)
         elif event.type==pygame.MOUSEBUTTONDOWN and event.button==1:
-            print("you pressed the mouse at",event.pos)
+##            print("you pressed the mouse at",event.pos)
+##            pygame.draw.line(screen,red,(event.pos),(100,900))
+##            pygame.draw.line(screen,red,(100,100),(event.pos))
+##            pygame.display.update()
+            x,y=event.pos
+            a= x -50
+            b=y-50
+            c=x+50
+            d=y+50
+            e= x +50
+            f=y+50
+            g=x-50
+            h=y-50
+            pygame.draw.line(screen,red,(a,b),(c,d))
+            pygame.draw.line(screen,red,(e,h),(g,f))
+            pygame.display.update()
             
         elif event.type==pygame.MOUSEBUTTONUP and event.button==1:
             print("you released the mouse at",event.pos)
+            
+    pygame.draw.line(screen,red,(300,0),(300,900))
+    pygame.draw.line(screen,red,(600,0),(600,900))
+    pygame.draw.line(screen,red,(0,300),(900,300))
+    pygame.draw.line(screen,red,(0,600),(900,600))
 ##
 ##while True:
 ##    a=a+1
